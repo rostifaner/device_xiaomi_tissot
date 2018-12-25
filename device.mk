@@ -16,6 +16,24 @@
 
 $(call inherit-product, vendor/xiaomi/tissot/tissot-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
+
+# Gapps
+GAPPS_VARIANT := nano
+
+# Include Gapps
+GAPPS_PRODUCT_PACKAGES += \
+    Chrome \
+    Photos \
+    Drive \
+    CalculatorGoogle \
+    Maps \
+    Wallpapers \
+    PrebuiltKeep \
+    TranslatePrebuilt \
+    CalendarGooglePrebuilt \
+    PrebuiltGmail \
+    LatinImeGoogle
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
